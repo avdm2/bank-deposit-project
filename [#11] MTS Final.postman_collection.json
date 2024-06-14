@@ -1,0 +1,495 @@
+{
+	"info": {
+		"_postman_id": "54d843f9-6780-4683-a9a8-0efffee1a938",
+		"name": "[#11] MTS Final",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "27662426"
+	},
+	"item": [
+		{
+			"name": "account",
+			"item": [
+				{
+					"name": "create",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1c2VyNCIsImlhdCI6MTcxODM4MDY3OCwiZXhwIjoxNzE4Mzg0Mjc4fQ.MnhsBP3xeHnFbo-i0wpbaHKkO6Jwt0Eu9WH7ARvRPYE",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"num\": \"7\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8081/api/account/create",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"api",
+								"account",
+								"create"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1c2VyMyIsImlhdCI6MTcxODM3NzMzNSwiZXhwIjoxNzE4MzgwOTM1fQ.XRdyuau_sYAoXZSTna0ZzwIMcZ7lUMzogAS7OYpIl3g",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8081/api/account/7",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"api",
+								"account",
+								"7"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "deposit",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1c2VyNCIsImlhdCI6MTcxODM4MDY3OCwiZXhwIjoxNzE4Mzg0Mjc4fQ.MnhsBP3xeHnFbo-i0wpbaHKkO6Jwt0Eu9WH7ARvRPYE",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"num\": 8,\r\n    \"amount\": 100000\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8081/api/account/deposit",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"api",
+								"account",
+								"deposit"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "withdraw",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1c2VyNCIsImlhdCI6MTcxODM4MDY3OCwiZXhwIjoxNzE4Mzg0Mjc4fQ.MnhsBP3xeHnFbo-i0wpbaHKkO6Jwt0Eu9WH7ARvRPYE",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"num\": 8,\r\n    \"amount\": 100\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8081/api/account/withdraw",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"api",
+								"account",
+								"withdraw"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getAll",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1c2VyNCIsImlhdCI6MTcxODM4MDY3OCwiZXhwIjoxNzE4Mzg0Mjc4fQ.MnhsBP3xeHnFbo-i0wpbaHKkO6Jwt0Eu9WH7ARvRPYE",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8081/api/account/all",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"api",
+								"account",
+								"all"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"auth": {
+				"type": "bearer",
+				"bearer": [
+					{
+						"key": "token",
+						"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1c2VyMiIsImlhdCI6MTcxODM3NjAyMiwiZXhwIjoxNzE4Mzc5NjIyfQ.yHtWAjOXAQsUmRe5HBGvFtIkmQH8p1mEzcw8sPIYBrg",
+						"type": "string"
+					}
+				]
+			},
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"type": "text/javascript",
+						"packages": {},
+						"exec": [
+							""
+						]
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"packages": {},
+						"exec": [
+							""
+						]
+					}
+				}
+			]
+		},
+		{
+			"name": "customer_service",
+			"item": [
+				{
+					"name": "register",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"username\": \"user1\",\r\n    \"password\": \"user4\",\r\n    \"phoneNumber\": \"79009009090\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8082/api/auth/register",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8082",
+							"path": [
+								"api",
+								"auth",
+								"register"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "login",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"username\": \"user4\",\r\n    \"password\": \"user4\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8082/api/auth/login",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8082",
+							"path": [
+								"api",
+								"auth",
+								"login"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "deposit",
+			"item": [
+				{
+					"name": "getDepositById",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1c2VyMiIsImlhdCI6MTcxODM3NjAyMiwiZXhwIjoxNzE4Mzc5NjIyfQ.yHtWAjOXAQsUmRe5HBGvFtIkmQH8p1mEzcw8sPIYBrg",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8083/api/deposit/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8083",
+							"path": [
+								"api",
+								"deposit",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getRequestById",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1c2VyMiIsImlhdCI6MTcxODM3NjAyMiwiZXhwIjoxNzE4Mzc5NjIyfQ.yHtWAjOXAQsUmRe5HBGvFtIkmQH8p1mEzcw8sPIYBrg",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8083/api/request/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8083",
+							"path": [
+								"api",
+								"request",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getAllDeposits",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1c2VyNCIsImlhdCI6MTcxODM4MDY3OCwiZXhwIjoxNzE4Mzg0Mjc4fQ.MnhsBP3xeHnFbo-i0wpbaHKkO6Jwt0Eu9WH7ARvRPYE",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8083/api/deposit/all",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8083",
+							"path": [
+								"api",
+								"deposit",
+								"all"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getAllRequests",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1c2VyNCIsImlhdCI6MTcxODM4MDY3OCwiZXhwIjoxNzE4Mzg0Mjc4fQ.MnhsBP3xeHnFbo-i0wpbaHKkO6Jwt0Eu9WH7ARvRPYE",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8083/api/request/all",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8083",
+							"path": [
+								"api",
+								"request",
+								"all"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "closeDeposit",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1c2VyNCIsImlhdCI6MTcxODM4MDY3OCwiZXhwIjoxNzE4Mzg0Mjc4fQ.MnhsBP3xeHnFbo-i0wpbaHKkO6Jwt0Eu9WH7ARvRPYE",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8083/api/deposit/close/22",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8083",
+							"path": [
+								"api",
+								"deposit",
+								"close",
+								"22"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "createDeposit",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1c2VyNCIsImlhdCI6MTcxODM4MDY3OCwiZXhwIjoxNzE4Mzg0Mjc4fQ.MnhsBP3xeHnFbo-i0wpbaHKkO6Jwt0Eu9WH7ARvRPYE",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"accountNumber\": 8,\r\n    \"amount\": 10001,\r\n    \"refill\": true,\r\n    \"withdraw\": \"false\",\r\n    \"endDate\": \"2024-12-31T21:00:00.000\",\r\n    \"percentPaymentDate\": \"2024-12-31T21:00:00.000\",\r\n    \"capitalization\": true\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8083/api/deposit/create",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8083",
+							"path": [
+								"api",
+								"deposit",
+								"create"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
