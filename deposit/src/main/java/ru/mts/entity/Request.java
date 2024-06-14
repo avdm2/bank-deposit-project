@@ -1,9 +1,7 @@
-package ru.mts.common.entity;
+package ru.mts.entity;
 
-import com.fasterxml.jackson.annotation.JsonBackReference;
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
-import jakarta.persistence.FetchType;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
@@ -13,29 +11,36 @@ import jakarta.persistence.Table;
 import lombok.Getter;
 import lombok.Setter;
 import lombok.experimental.Accessors;
+import ru.mts.common.entity.Customer;
 
-import java.math.BigDecimal;
+import java.time.LocalDateTime;
 
 @Getter
 @Setter
 @Accessors(chain = true)
-@Table(name = "bank_accounts")
+@Table(name = "requests")
 @Entity
-public class Account {
+public class Request {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "id_bank_accounts")
+    @Column(name = "id_request")
     private Integer id;
 
-    @Column(name = "num_bank_accounts", nullable = false, precision = 20, unique = true)
-    private BigDecimal num;
-
-    @Column(name = "amount", nullable = false)
-    private BigDecimal amount;
-
-    @ManyToOne(fetch = FetchType.EAGER)
+    @ManyToOne
     @JoinColumn(name = "customer_id", nullable = false)
-    @JsonBackReference
     private Customer customer;
+
+    @ManyToOne
+    @JoinColumn(name = "deposit_id", nullable = false)
+    private Deposit deposit;
+
+    @Column(name = "request_status", nullable = false)
+    private String status;
+
+    @Column(name = "request_date", nullable = false)
+    private LocalDateTime requestDate;
+
+    @Column(name = "update_date", nullable = false)
+    private LocalDateTime updateDate;
 }
